@@ -1,13 +1,13 @@
 import mongoose from "mongoose"
 
 const designationSchema = mongoose.Schema({
-  name: { type: String, require: true },
+  name: { type: String, required: true },
   departmentId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Departmetns",
-    require: true,
+    ref: "Department",
+    default: null,
   },
   description: { type: String },
 });
 
-export default mongoose.model("Designations", designationSchema);
+export default mongoose.model("Designation", designationSchema);
