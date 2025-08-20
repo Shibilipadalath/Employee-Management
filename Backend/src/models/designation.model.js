@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose"
 
 const designationSchema = mongoose.Schema({
   name: { type: String, require: true },
