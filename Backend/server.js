@@ -14,7 +14,14 @@ app.use(express.json())
 
 dotenv.config()
 
-app.use(cors())
+const allowedOrigin = process.env.FRONTEND_URL || "http://localhost:5001";
+
+app.use(cors({
+  origin: allowedOrigin,
+  methods: ["GET","POST","PUT","DELETE"],
+  credentials: true
+}));
+
 
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
