@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE = process.env.BASE_URL || "http://localhost:5001/api";
+const BASE = process.env.REACT_APP_BASE_URL || "http://localhost:5001/api";
 
 //employee api connect
 export const fetchEmployees = () => axios.get(`${BASE}/employee`);
