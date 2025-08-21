@@ -1,5 +1,6 @@
 import express from "express"
 import dotenv from "dotenv"
+import cors from "cors"
 
 
 import {connectDB} from "./src/lib/db.js"
@@ -11,6 +12,11 @@ const app=express()
 app.use(express.json())
 
 dotenv.config()
+
+app.use(cors({
+    origin: "http://localhost:3000/"
+}));
+
 
 connectDB()
 
