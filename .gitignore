@@ -1,4 +1,6 @@
+# =========================
 # Node.js dependencies
+# =========================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -8,29 +10,36 @@ package-lock.json
 yarn.lock
 .pnpm-debug.log
 
+# =========================
 # Logs
-logs
+# =========================
+logs/
 *.log
-logs/*
 *.out
 *.pid
 *.seed
 *.gz
 
+# =========================
 # Runtime data
-pids
+# =========================
+pids/
 *.pid
 *.seed
 *.pid.lock
 
+# =========================
 # Environment variables
+# =========================
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# =========================
 # Build outputs
+# =========================
 dist/
 build/
 .cache/
@@ -38,20 +47,28 @@ build/
 out/
 coverage/
 
-# VSCode & IDE
+# =========================
+# IDEs & editors
+# =========================
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Mac & Linux
+# =========================
+# OS files
+# =========================
 .DS_Store
 Thumbs.db
 
+# =========================
 # Uploads
+# =========================
 /backend/uploads/
 
-# React specific
+# =========================
+# React frontend specific
+# =========================
 frontend/node_modules/
 frontend/build/
 frontend/.cache/
