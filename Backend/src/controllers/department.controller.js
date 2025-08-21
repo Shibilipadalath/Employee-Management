@@ -40,7 +40,7 @@ export const updateDepartment = async (req, res) => {
     const { id } = req.params;
     const { name, description } = req.body;
 
-    const existingDepartment = await Department.findOne({ name });
+    const existingDepartment = await Department.findOne({ name, _id: { $ne: id } });
     if (existingDepartment) {
       return res.status(400).json({ message: "Department already exists" });
     }
