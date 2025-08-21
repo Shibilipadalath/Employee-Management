@@ -12,7 +12,7 @@ export default function EmployeeViewModal({ show, handleClose, employee }) {
       <Modal.Body>
         <div className="text-center mb-3">
           <Image
-            src={`http://localhost:5001/uploads/${employee.image}`}
+            src={`http://localhost:5001/uploads/${employee.image}` || `https://employee-management-v0ae.onrender.com/uploads/${employee.image}`}
             roundedCircle
             width={120}
             height={120}

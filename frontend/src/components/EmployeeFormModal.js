@@ -53,7 +53,7 @@ export default function EmployeeFormModal({ show, handleClose, editEmployee, onA
         doj: editEmployee.doj ? new Date(editEmployee.doj) : null,
         image: null,
       });
-      setImgPrev(`http://localhost:5001/uploads/${editEmployee.image}`);
+      setImgPrev(`http://localhost:5001/uploads/${editEmployee.image}`||`https://employee-management-v0ae.onrender.com/uploads/${editEmployee.image}`);
       setErrors({});
     } else if (show) {
       setForm({

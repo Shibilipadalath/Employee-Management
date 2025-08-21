@@ -18,7 +18,7 @@ export default function EmployeeList({ employees, onEdit, onView, onDelete }) {
           <tr key={emp._id}>
             <td>
               <Image
-                src={`http://localhost:5001/uploads/${emp.image}`}
+                src={`http://localhost:5001/uploads/${emp.image}` || `https://employee-management-v0ae.onrender.com/uploads/${emp.image}`}
                 width={50}
                 height={50}
                 roundedCircle
