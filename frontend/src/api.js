@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE = "http://localhost:5001/api";
+const BASE = process.env.BASE || "http://localhost:5001/api";
 
 //employee api connect
 export const fetchEmployees = () => axios.get(`${BASE}/employee`);
