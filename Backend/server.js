@@ -1,6 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import cors from "cors"
+import path from "path"
 
 
 import {connectDB} from "./src/lib/db.js"
@@ -13,10 +14,9 @@ app.use(express.json())
 
 dotenv.config()
 
-app.use(cors({
-    origin: "http://localhost:3000/"
-}));
+app.use(cors())
 
+app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
 connectDB()
 
